@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Password Strength Checker</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🔒 Password Strength Checker</h1>
+
+    <p>
+        Check your password strength and generate secure passwords instantly.
+    </p>
+
+</header>
+
+
+<main class="container">
+
+    <!-- LEFT SIDE -->
+
+    <section class="left">
+
+        <label>Password</label>
+
+        <div class="password-box">
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your password">
+
+            <button
+                id="togglePassword"
+                class="icon-btn">
+                👁
+            </button>
+
+        </div>
+
+
+        <div class="buttons">
+
+            <button id="checkBtn">
+                Check Strength
+            </button>
+
+            <button id="generateBtn">
+                Generate Password
+            </button>
+
+        </div>
+
+
+        <div class="strength-section">
+
+            <h3>Password Strength</h3>
+
+            <div class="progress">
+
+                <div id="strengthBar"></div>
+
+            </div>
+
+            <p id="strengthText">
+                Enter a password...
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- RIGHT SIDE -->
+
+    <section class="right">
+
+        <h2>Password Requirements</h2>
+
+        <ul class="requirements">
+
+            <li id="length">
+                ❌ Minimum 8 Characters
+            </li>
+
+            <li id="uppercase">
+                ❌ One Uppercase Letter
+            </li>
+
+            <li id="lowercase">
+                ❌ One Lowercase Letter
+            </li>
+
+            <li id="number">
+                ❌ One Number
+            </li>
+
+            <li id="special">
+                ❌ One Special Character
+            </li>
+
+        </ul>
+
+
+        <div class="generator">
+
+            <h2>Generated Password</h2>
+
+            <input
+                type="text"
+                id="generatedPassword"
+                readonly
+                placeholder="Click Generate Password">
+
+            <button id="copyBtn">
+                Copy Password
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    Made with ❤️ using Flask, HTML, CSS & JavaScript
+
+</footer>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
